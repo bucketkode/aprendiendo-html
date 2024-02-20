@@ -1,150 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <style>
-        table, th, td{
-            border: 1px solid black;
-        }
-    </style>
-    <title>Mi primera web</title>
-</head>
+    <title>Mi primer blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
 <body>
-    <!--listar y distribuir el contenido de nuestras tablas como en sus cabaceras como en los pies
-    una tabla se divide principalmente en filas y colmnunas y cada una de nuestras columnas va tener
-    una cabecera y una piecera
-    tr indica una fila dentro de nuestra tabla
-    con th dentro de tr indicamos que es una cabecera
-    td se utilizar para definir elementos estandares que se encuentran dentro de las celdas de
-    nuesra tabla
-    cada que agregamos una etiqueta de th lo que hara es agregar una columna pero tambien lo va hacer
-    en el caso que coloquemos etiquetas td por que si no somo ordenados podemos terminar con una tabla
-    que tendra mas celdas en sus filas que cabeceras, nosotros queremos que cada una de nuestras
-    columnas tenga una cabecera para saber a que hace referencia cada una de nuestras colmunas-->
-    <table style="width: 500px;"> 
-        <thead>
-            <tr>
-                <th>Producto</th>
-                <th>Precio</th>
-            </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Celular</td>
-            <td>280$</td>
-        </tr>
-        <tr>
-            <td>Portatil</td>
-            <td>1200$</td>
-        </tr>
-        <tr>
-            <td>Avion de control remoto con pilas</td>
-            <td>60$</td>
-        </tr>
-        </tbody>
-        <tfoot>
-            <td></td>
-            <td>Total: 2060$</td>
-        </tfoot>
-        <!--thead sirve par a indicar la cabecera y tbody para los que hacen parte de la fila
-        -->
-    </table>
-    <!--listas
-    ul significa listas no ordenadas
-    y ol es lista ordenada
-    en los ol le puedo indicar el valor con el cual empezar
-    li es list item-->
-    <ul>
-        <li>Elemento 1</li>
-        <li>Elemento 2</li>
-        <li>Elemento 3</li>
-        <li>Elemento 4</li>
-    </ul>
-    <ol>
-        <li value="50">Elemento 1</li>
-        <li>Elemento 2</li>
-        <li>Elemento 3</li>
-        <li>Elemento 4</li>
-        <li>
-            <ol>
-                <li style="list-style-type: lower-alpha;">sub elemento 1</li>
-                <li style="list-style-type: lower-alpha;">sub elemento 2</li>
-                <li style="list-style-type: lower-alpha;">sub elemento 3</li>
-            </ol>
-        </li>
-    </ol>
-
-
-
-
-
-
-    <!--la etiqueta input se usa para recopilar informacion-->
-    <!--para que haga sentido el dato que te queremos recopilar usaremos la 
-    etiqueta label-->
-    <!--para darle foco al campo usaremos la propiedad for-->
-    <!--en form pasamos la propiedad actions para la ruta que contiene la ruta a nuestro servidor
-    method es para el elegir el metodo de envio que usaremos para enviar los datos al servidor 
-    aca tenemos dos alternativas get y post, get envia los valores que se encuentran en los campos
-    atravez de la url -->
-    <!--value se usa para asignar valores por defecto pero por ejemplo en text area no se usa eso
-    si no se coloca en el contenido de texrarea, value se utiliza para darle un valor por defecto 
-    a algun label que le queramos asignar un value default-->
-    <form action="/formulario" method="post" >
-        <label for="nombre">Nombre</label>
-        <input value="chanchito" type="text" id="nombre" name="nombre" placeholder="Juan... "/>
-        <br>
-        <label for="apellido">Apellido</label>
-        <input value="feliz" type="text" id="apellido" name="apellido" placeholder="Angulo... "/>
-        <br>
-        <label for="comentario">Comentario</label>
-        <textarea cols="30" rows="10" id="comentario" placeholder="ingrese comentario..." name="comentario">valor por defecto</textarea>
-        <br>
-        <!--en los inputs tipo submit no se pueden agregar etiquetas dentro de ellos
-        <input type="submit">
-        -->
-        <!--la ventaja de los button es que podemos usar etiquetas en input no
-            en el type de button podemos pasarle button, reset, submit-->
-        <button type="button">tipo boton</button>
-        <button type="reset">tipo reset</button>
-        <button type="submit">tipo submit</button>
-        <!--button no hace nada, el comportamiento se lo damos con javascript
-        reset como su nombre indica resetea los valores de los inputs
-        y el submit que es el que envia pero con solo agregar la etiqueta button dentro del form ya
-        se toma por defecto el type submit-->
-
-        <!--con submit enviamos la informacion al servidor que esta en el form-->
-        <!--la etiqueta area tiene propiedades similares a input, se nos abrira una caja que podemos
-        redimensionar pero con la propiedad rows podemos elegir el tamañoy cols tambien que recibe columnas -->
-        <!--algunos valores recurrentes en type pueden ser email, password, radio, checkbox, file -->
-        <!--la propiedad type se utiliza para especificar el tipo de entrada de un formulario-->
-        <!--lo que esta entre comillas es el identificador
-        la propiedad name es la llave que recibe el servidor como formulario no se puede
-        olvidar
-        la propiedad placeholder se utilza para indicar el tipo de dato que vamos a ingresar
-        en el label-->
-    </form>
-    <!--los headings son importantes por que se usan como motores de busqueda-->
-    <h1>Mi primer heading</h1>
-    <h2>Mi segundo heading</h2>
-    <h3>Mi tercer heading</h3>
-    <h4>Mi segundo heading</h4>
-    <h5>Mi quinto heading</h5>
-    <h6>Mi sexto heading</h6>
-    <!--p es para escribir parrafos-->
-    <p>Hola</p>
-    <!--podemos usar para hacer una division en nuestro contenido-->
-    <hr>
-    <p>hola chanchito</p>
-    <h2>hoLa</h2>
-    <!--podemos seleccionar una parte del texto-->
-    <p>texto un poco mas, <span style="color: red;">un poco</span> mas de texto <br>
-    salto de linea wiiii </p>
-    <!--podemos usar la etiqueta br para el salto de linea-->
-    <!--la etiqueta a la podemos usar para hipevinculos y si agregamos la propiedad target
-    y le asignamos el valor _blank se abrira el hipervinculo en otra pestaña-->
-    <a target="_blank" href="https://www.youtube.com/watch?v=MJkdaVFHrto&t=1776s">
-    curso html holamundo</a>
-    <!--para agregar imagenes usaremos la etiqueta img-->
-    <img src="img/wallhaven-95j8kw_1920x1080.png" height="400" width="600">
+    <!--la etiqueta header sirve para agrupar links, alguna imagen o logo de nuestra página
+    y lo mas importante es que podemos crear tantas etiquetas de header como nosotros queramos
+    siempre y cuando esta cumpla con dos reglas, no podemos colocar un header dentro de un header
+    y no podemos colocar un header en un footer-->
+    <!--footer se usa para colocar el pie de página de nuestra página web el footer contiene cosas 
+    como el copyright, informacion de conntacto, informacion del sitio o como navegar en el, links
+    para volver al inicio de nuestra página-->
+    <!--section como su nombre indica sirve para definir secciones de nuestra aplicacion-->
+    <!--article sirve para definir contenido independiente funciona bien por ejemplo para definir
+    los posts de un blog donde podremos colocar un titulo, una imagen, una descripcion y un parrafo
+    que contendra todo el texto de nuestro post-->
+    <!--div tiene la misma funcionalidad que section, era muy utilizada antes de que saliera section
+    y article -->
+    <!--los parametros que se pasan en las etiquetas como por ejemplo id, se les conoce como atributo
+    nos sriven para interactuar con esos elementos ya sea mediante javascript o para poder asignarle
+    un estilo-->
+    <!--si quieres usar mas de un mismo texto para identificar se usa el atributo class-->
+    <!--con estos atributos podremos en javascript seleccionar los elementos, finalmente los atributos
+    nos sirven para identificar los elementos que luego pueden ser sleccionado con selectores -->
+    <header id="1">
+        <h1 id="title">Blog de Edward</h1>
+    </header>
+    <section class="container">
+        <article class="post">
+            <h2>Titulo de mis post</h2>
+            <p>Descripcion de mi post</p>
+            <img src="img/guitarra.png" width="400"/>
+            <p>Texto del articulo que esta aca solo es texto de prueba, prueba es
+                una prueba
+            </p>
+        </article>
+        <article class="post">
+            <h2>Titulo de mi segundo post</h2>
+            <p>Descripcion de mi segundo post</p>
+            <img src="img/coffee.png" width="400"/>
+            <p>Texto del segundo articulo que esta aca solo es texto de prueba, prueba es
+                una prueba
+            </p>
+        </article>
+        <article class="post">
+            <h2>Titulo de mi tercer post</h2>
+            <p>Descripcion de mi tercer post</p>
+            <img src="img/monster.png" width="400"/>
+            <p>Texto del tercer articulo que esta aca solo es texto de prueba, prueba es
+                una prueba
+            </p>
+        </article>
+    </section>
+    <footer>
+        <section>
+        <a href="#1">Volver al inicio</a>
+        <a href="mailto:edwardandres2006@outlook.com">Contactame aqui</a>
+        </section>
+        <p>Copyright 2024 ©</p>
+    </footer>
 </body>
 </html>
